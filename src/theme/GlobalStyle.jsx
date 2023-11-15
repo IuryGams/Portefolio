@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         text-decoration: none;
         list-style: none;
+        color: white;
     }
 
     body{

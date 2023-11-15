@@ -7,13 +7,10 @@ import styled from "styled-components";
 const ContainerHeader = styled.header`
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 8vh;
-    max-width: 1440px;
+    justify-content: space-around;
+    width: 100vw;
     min-width: 250px;
-    margin: 0 auto;
-    padding: 0 1em;
+    padding: 1em;
     background-color: transparent;
     position: relative;
 `

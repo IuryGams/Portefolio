@@ -1,4 +1,5 @@
 import Header from "components/Header";
+import Presentation from "components/Presentation";
 import MobileProvider from "context/mobileMenu";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <MobileProvider>
       <div className="App">
         <Header />
+        <Presentation />
       </div>
     </MobileProvider>
   );

@@ -5,10 +5,10 @@ const options = {
     height: "4px",
     borderRadius: "2px",
     backgroundColor: "white",
-    transition: "all 400ms ease-in-out"
+    transition: "all 200ms ease-in-out"
 }
 
-const ContainerBurguer = styled.label`
+const ContainerBurguer = styled.div`
     display: none;
 
     @media only screen and (max-width: 768px) {
@@ -17,6 +17,14 @@ const ContainerBurguer = styled.label`
         padding: 1em 0.75em;
         border-radius: 4px;
         cursor: pointer;
+
+        &:hover{
+            background-color: white;
+            
+            div, div::after, div::before{
+                background-color: black;
+            }
+        }
     }
 
 

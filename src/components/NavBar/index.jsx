@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 const StyledNav = styled.nav`
     display: flex;
-    gap: 10px;
     transition: all 400 ease-in-out;
 
     @media only screen and (max-width: 768px) {
@@ -19,7 +18,7 @@ const StyledNav = styled.nav`
 
 const List = styled.ul`
     display: flex;
-    gap: 16px;
+    gap: 32px;
     color: white;
     font-size: 1.5em;
     font-weight: bold;
@@ -31,6 +30,14 @@ const List = styled.ul`
         justify-content: space-around;
         width: 100%;
         height: 92vh;
+    }
+
+    li{
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        &:hover{
+            border-bottom: 3px solid white;
+        }
     }
 `
 
