@@ -11,7 +11,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        background-color: #E9e9e9;
+        width: 100%;
+        min-height: 100vh;
+        height: 100%;
+        background-image: linear-gradient(to bottom, #051937, #002668, #172f98, #4e2ec5, #8c12eb);
     }
 `
 
