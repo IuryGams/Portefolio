@@ -9,11 +9,17 @@ const options = {
 }
 
 const ContainerBurguer = styled.label`
-    display: block;
-    border: 1px solid #e9e9e9;
-    padding: 1em;
-    border-radius: 4px;
-    cursor: pointer;
+    display: none;
+
+    @media only screen and (max-width: 768px) {
+        display: block;
+        border: 1px solid #e9e9e9;
+        padding: 1em 0.75em;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+
 `
 
 const Burguer = styled.div`
