@@ -7,14 +7,13 @@ export default function MobileProvider ({ children }) {
 
     const [open, setOpen] = useState(false);
 
+    function toggleMenu () {
+        setOpen(!open)
+    }
+
     return (
-        <MobileMenuContext.Provider value={{ open, setOpen }}>
+        <MobileMenuContext.Provider value={{ open, toggleMenu }}>
             {children}
         </MobileMenuContext.Provider>
     )
-}
-
-export function useMobileMenu() {
-    const { open, setOpen } = useContext(MobileMenuContext);
-    setOpen(!open);
 }
