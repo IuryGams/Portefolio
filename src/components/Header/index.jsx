@@ -1,4 +1,7 @@
 import NavBar from "components/NavBar";
+import MobileNavBar from "components/NavBar/MobileNavBar";
+import { MobileMenuContext } from "context/mobileMenu";
+import { useContext } from "react";
 import styled from "styled-components";
 
 const ContainerHeader = styled.header`
@@ -18,12 +21,16 @@ const Title = styled.h1`
 `
 
 const Header = () => {
+
+    const contextMenu = useContext(MobileMenuContext);
+    
     return (
         <ContainerHeader>
             <Title>Iury Gama</Title>
             <NavBar>
-
+                
             </NavBar>
+            <MobileNavBar context={contextMenu}/>
         </ContainerHeader>
     )
 }

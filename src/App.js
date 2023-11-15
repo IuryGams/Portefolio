@@ -1,10 +1,13 @@
 import Header from "components/Header";
+import MobileProvider from "context/mobileMenu";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <MobileProvider>
+      <div className="App">
+        <Header />
+      </div>
+    </MobileProvider>
   );
 }
 
