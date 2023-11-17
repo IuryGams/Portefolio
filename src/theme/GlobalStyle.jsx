@@ -9,13 +9,24 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         list-style: none;
         color: white;
+        /* text-shadow: #000 1px 2px 3px; */
+        &::selection{
+            background-color: black;
+        }
+    }
+
+    h1, h2{
+        text-shadow: #000 1px 2px 3px;
     }
 
     body{
         width: 100%;
         min-height: 100vh;
         height: 100%;
-        background-image: linear-gradient(to bottom, #051937, #002668, #172f98, #4e2ec5, #8c12eb);
+        background-image: linear-gradient(to bottom, #1958b7, #3053c0, #494bc6, #6141ca, #7a30cb); 
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
 `
 

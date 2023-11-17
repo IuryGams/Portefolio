@@ -17,28 +17,18 @@ const ContainerBurguer = styled.div`
         padding: 1em 0.75em;
         border-radius: 4px;
         cursor: pointer;
-
-        &:hover{
-            background-color: white;
-            
-            div, div::after, div::before{
-                background-color: black;
-            }
-        }
     }
-
-
 `
 
 const Burguer = styled.div`
     width: ${ options.width };
     height: ${ options.height };
     background-color: ${({ $open }) => $open ? "rgba(0, 0, 0, 0)" : options.backgroundColor };
+    
     border-radius: ${ options.borderRadius };
     transition: ${ options.transition };
     position: relative;
     
-
     &::before, &::after{
         content: "";
         position: absolute;
@@ -53,8 +43,6 @@ const Burguer = styled.div`
         margin-top: ${({ $open }) => $open ? "0" : "-10px"};
         transform: ${({ $open }) => $open ? "rotate(405deg)" : "rotate(0deg)"};
     }
-
-
 
     &::after{
         margin-top: ${({ $open }) => $open ? "0" : "10px"};
