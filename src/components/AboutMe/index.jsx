@@ -2,42 +2,6 @@ import styled from "styled-components";
 import Title from "components/Title";
 import Section from "components/ContainerSection";
 
-const ContainerAboutMy = styled.section`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    min-height: 100vh;
-    flex-direction: column;
-    position: relative;
-
-    &::before{
-        content: "";
-        position: absolute;
-        top: 0%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: white;
-        width: 50%;
-        height: 3px;
-        border-radius: 4px;
-    }
-
-    @media only screen and (max-width: 768px) {
-        &::before{
-            content: "";
-            position: absolute;
-            top: -2%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            width: 75%;
-            height: 3px;
-            border-radius: 4px;
-        }
-    }
-`
-
 const Description = styled.span`
     text-align: center;
     font-size: 1.2em;
@@ -175,7 +139,7 @@ const AboutMe = () => {
                 </ContentText>
                 <StyledAside>
                     <figure>
-                        <img src="https://github.com/IuryGams.png" alt="" />
+                        <img src="https://github.com/IuryGams.png" alt="Foto de Iury Gama. Um homem de pele clara, utilizando óculos de grau, olhos e cabelos castanhos." />
                     </figure>
                 </StyledAside>
             </Content>

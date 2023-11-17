@@ -1,8 +1,10 @@
 import Section from "components/ContainerSection";
 import Title from "components/Title";
 import styled from "styled-components";
-import email from "./emailMessage.svg";
+import emailImg from "./emailMessage.svg";
 import Button from "components/Button";
+import { useState, useRef } from "react";
+import emailjs from "emailjs-com";
 
 const Description = styled.span`
     text-align: center;
@@ -81,7 +83,6 @@ const StyledFieldSet = styled.fieldset`
         gap: 1.2em;
     }
 `
-
 
 const BoxInput = styled.div`
     position: relative;
@@ -176,29 +177,51 @@ const ContainerTextArea = styled.div`
 `
 
 const Contact = () =>{
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const form = useRef();
+    
+    function enviarEmail(event) {
+        event.preventDefault();
+        
+        emailjs.sendForm("service_dap7ivi", "template_fcgtqo5", form.current, "_EVfmAKNWoIIUCNJp")
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+
+        setName("")
+        setEmail("")
+        setMessage("")
+    }
+
     return(
         <Section>
             <Title>Contate-me</Title>
             <Description>Aqui você pode entrar em contato comigo.</Description>
             <ContainerForm>
-                <StyledForm>
+                <StyledForm ref={form} onSubmit={(e) => enviarEmail(e)}>
                     <Image>
-                        <img src={email} alt="" />
+                        <img src={emailImg} alt="Um rapaz enviando um e-mail." />
                     </Image>
                 
                     <StyledFieldSet>
                         <BoxInput>
-                            <input id="name" type="text" required />
+                            <input value={name} onChange={(e) => setName(e.target.value)} id="name" type="text" name="name" required />
                             <label htmlFor="name">Nome</label>
                         </BoxInput>
                             
                         <BoxInput>
-                            <input id="email" type="email" required />
+                            <input value={email} onChange={(e) => setEmail(e.target.value)} id="email" name="email" type="email" required />
                             <label htmlFor="email" >E-mail</label>
                         </BoxInput>
 
                         <ContainerTextArea>
-                            <textarea id="message" type="text" required />
+                            <textarea value={message} onChange={(e) => setMessage(e.target.value)} id="message" name="message" type="text" required />
                             <label htmlFor="message" >Escreva sua mensagem...</label>
                         </ContainerTextArea>
 
