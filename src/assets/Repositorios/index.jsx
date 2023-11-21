@@ -24,7 +24,7 @@ export const Repositorios = [
     {
         name: "E-commerce NEXT.JS",
         image: "https://i.ibb.co/bQ9H4TP/imagem-2023-11-21-034031450.png",
-        description: "Um simples projeto de uma estrutura e-commerce criando com NEXT.JS. (Em andamento)",
+        description: "Um simples projeto de uma estrutura e-commerce criado emn NEXT.JS e TypeScript. (Em desensolvimento)",
         url: "https://e-commerce-next-rho.vercel.app",
         git: "https://github.com/IuryGams/E-commerce-Next"
     },
