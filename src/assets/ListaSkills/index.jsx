@@ -1,7 +1,8 @@
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt    } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiNextdotjs } from "react-icons/si";
-import { SiStyledcomponents, SiJsonwebtokens } from "react-icons/si";
+import { SiStyledcomponents } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
 
 
 export const ListaSkills = [
@@ -10,7 +11,7 @@ export const ListaSkills = [
         bgCor: "#4D00DB",
         cor: "#149ECA",
         text: "React.JS",
-        tempo: "2 Meses",
+        tempo: "2 Meses (estudando)",
         description: "Venho estudando bastante React.js, com foco em compononentes reutilizaveis e seus Hooks."
     },
     {
@@ -38,12 +39,12 @@ export const ListaSkills = [
         description: "Venho me divertindo muito utilizando o Styled-components para estilização e responsividade."
     },
     {
-        icon: <SiJsonwebtokens />,
+        icon: <TbApi />,
         bgCor: "#4D00DB",
-        cor: "#4cff79",
-        text: "Json Web Token",
+        cor: "transparent",
+        text: "Api REST",
         tempo: "1 Ano",
-        description: "Durante o meu desenvolvimento Back-end. Aprendi a fazer sistema de autenticação, autorização e acesso."
+        description: "Em meus estudos sobre banco de dados e API. Aprendi a desenvolver uma API REST com Express e Sequelize."
     },
     {
         icon: <FaHtml5 />,

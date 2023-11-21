@@ -5,19 +5,8 @@ import emailImg from "./emailMessage.svg";
 import Button from "components/Button";
 import { useState, useRef } from "react";
 import emailjs from "emailjs-com";
+import SubTitle from "components/SubTitle";
 
-const Description = styled.span`
-    text-align: center;
-    font-size: 1.2em;
-    max-width: 50%;
-    margin: 0 auto;
-    margin-bottom: 1em;
-
-    @media only screen and (max-width: 768px) {
-        max-width: 100%;
-        padding: 0 1em;
-    }
-`
 
 const ContainerForm = styled.div`
     display: flex;
@@ -176,6 +165,12 @@ const ContainerTextArea = styled.div`
     }
 `
 
+const ContainerButton = styled.div`
+    display: flex;
+    justify-content: center;
+    width: 100%;
+`
+
 const Contact = () =>{
 
     const [name, setName] = useState("");
@@ -202,7 +197,7 @@ const Contact = () =>{
     return(
         <Section>
             <Title>Contate-me</Title>
-            <Description>Aqui você pode entrar em contato comigo.</Description>
+            <SubTitle>Aqui você pode entrar em contato comigo.</SubTitle>
             <ContainerForm>
                 <StyledForm ref={form} onSubmit={(e) => enviarEmail(e)}>
                     <Image>
@@ -224,10 +219,10 @@ const Contact = () =>{
                             <textarea value={message} onChange={(e) => setMessage(e.target.value)} id="message" name="message" type="text" required />
                             <label htmlFor="message" >Escreva sua mensagem...</label>
                         </ContainerTextArea>
-
-                        <Button type="submit" background="#4D00DB" >
-                            Enviar
-                        </Button>
+                        
+                        <ContainerButton>
+                            <Button type="submit" background="#4D00DB" >Enviar</Button>
+                        </ContainerButton>
 
                     </StyledFieldSet>
 

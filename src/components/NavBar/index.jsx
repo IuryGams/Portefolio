@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom";
 
 const StyledNav = styled.nav`
     display: flex;
@@ -53,16 +54,10 @@ const NavBar = ({ context }) => {
         <StyledNav $open={context.open} >
             <List $open={context.open} >
                 <li>
-                    <a href="/" >Inicio</a>
+                    <Link to="/" >Inicio</Link>
                 </li>
                 <li>
-                    <a href="/" >Sobre mim</a>
-                </li>
-                <li>
-                    <a href="/" >Meus Projetos</a>
-                </li>
-                <li>
-                    <a href="/" >Contato</a>
+                    <Link to="/myProjects" >Meus Projetos</Link>  
                 </li>
             </List>
         </StyledNav>

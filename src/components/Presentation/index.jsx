@@ -80,7 +80,7 @@ const ContainerButtons = styled.div`
     width: 100%;
     gap: 40px;
     order: 4;
-    padding: 0 2em;
+    /* padding: 0 2em; */
     /* z-index: -1; */
 
 

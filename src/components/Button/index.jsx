@@ -9,6 +9,7 @@ const StyledButton = styled.button`
     background-color: transparent;
     font-size: 18px;
     font-weight: bold;
+    padding: 1em;
     width: 100%;
     margin: 0 5px;
     height: 15%;

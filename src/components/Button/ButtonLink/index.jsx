@@ -9,10 +9,9 @@ const StyledButton = styled.a`
     background-color: transparent;
     font-size: 18px;
     font-weight: bold;
-    width: 25%;
-    height: 100%;
+    width: 200px;
+    height: 50px;
     margin: 0 15px;
-    padding: 10px 0;
     border: 2px solid #e9e9e9;
     border-radius: 0.225em;
     position: relative;

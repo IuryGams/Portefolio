@@ -9,16 +9,14 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         list-style: none;
         color: white;
-        /* text-shadow: #000 1px 2px 3px; */
         &::selection{
             background-color: black;
         }
     }
 
-    h1, h2{
-        text-shadow: #000 1px 2px 3px;
+    html{
+        scroll-behavior: smooth;
     }
-
     body{
         width: 100%;
         min-height: 100vh;

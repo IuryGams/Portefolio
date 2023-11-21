@@ -31,6 +31,21 @@ const ContainerCard = styled.div`
         text-align: center;
     }
 
+    @media only screen and (max-width: 1240px) {
+        width: 220px;
+        gap: 6px;
+
+        h2{
+            font-size: 20px;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            
+        }
+    }
+
+
     @media only screen and (max-width: 768px) {
         width: 175px;
         gap: 6px;

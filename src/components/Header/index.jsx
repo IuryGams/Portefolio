@@ -9,9 +9,8 @@ const ContainerHeader = styled.header`
     align-items: center;
     justify-content: space-around;
     width: 100vw;
-    height: 6vh;
     min-width: 250px;
-    padding: 1em;
+    padding: 0.75em 0;
     background-color: transparent;
     position: relative;
     border-bottom: 0.4px solid #FFF2E7;
@@ -27,9 +26,6 @@ const ContainerHeader = styled.header`
 
 `
 
-const Title = styled.h1`
-    color: white;
-`
 
 const Header = () => {
 
@@ -37,7 +33,7 @@ const Header = () => {
 
     return (
         <ContainerHeader $open={contextMenu.open}>
-            <Title>Iury Gama</Title>
+            <h1>Iury Gama</h1>
             <NavBar context={contextMenu}>
                 
             </NavBar>

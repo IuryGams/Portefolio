@@ -5,7 +5,7 @@ const StyledSection = styled.section`
     align-items: center;
     justify-content: center;
     width: 100vw;
-    min-height: 90vh;
+    min-height: 100vh;
     flex-direction: column;
     position: relative;
 

@@ -1,38 +1,23 @@
-import Skills from "components/Skills";
-import Header from "components/Header";
-import Presentation from "components/Presentation";
 import MobileProvider from "context/mobileMenu";
-import styled from "styled-components";
-import AboutMe from "components/AboutMe";
-import Footer from "components/Footer";
-import Contact from "components/Contact";
-
-const StyledMain = styled.main`
-  display: block;
-
-  @media screen and (max-width: 768px) {
-
-    width: 100%;
-  }
-
-  &::-webkit-scrollbar{
-    display: none;
-  }
-`
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "pages/Home";
+import BasePage from "pages/BasePage";
+import MyProjects from "pages/MyProjects";
 
 function App() {
   return (
     <MobileProvider>
+      <BrowserRouter>
       <div className="App">
-        <Header />
-        <StyledMain>
-          <Presentation />
-          <AboutMe />
-          <Skills />
-          <Contact />
-        </StyledMain>
-        <Footer />
+        <Routes>
+            <Route path="/" element={ <BasePage />} >
+              <Route index element={ <Home />} />
+              <Route path="/myProjects" element={ <MyProjects />} />
+            </Route>
+        </Routes>
+          
       </div>
+      </BrowserRouter>
     </MobileProvider>
   );
 }
