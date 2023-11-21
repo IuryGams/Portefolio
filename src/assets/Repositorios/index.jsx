@@ -21,4 +21,11 @@ export const Repositorios = [
         url: "https://alura-space-swart.vercel.app",
         git: "https://github.com/IuryGams/Alura-Space"
     },
+    {
+        name: "E-commerce NEXT.JS",
+        image: "https://i.ibb.co/bQ9H4TP/imagem-2023-11-21-034031450.png",
+        description: "Um simples projeto de uma estrutura e-commerce criando com NEXT.JS. (Em andamento)",
+        url: "https://e-commerce-next-rho.vercel.app",
+        git: "https://github.com/IuryGams/E-commerce-Next"
+    },
 ]
